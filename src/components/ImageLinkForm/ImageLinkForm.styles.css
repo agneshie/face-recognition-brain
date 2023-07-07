@@ -1,0 +1,21 @@
+.form {
+  width: 70%;
+}
+
+.form-input {
+  width: 60%;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+
+.form-btn {
+  width: 30%;
+  background-color: violet;
+  color: white;
+  font-size: 20px;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+
+

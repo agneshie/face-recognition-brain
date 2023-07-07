@@ -1,0 +1,15 @@
+.tilt {
+  margin-left: 30px;
+  border-radius: 5px;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tilt-inner {
+  padding-top: 20px;
+  font-size: 10px;
+}
+
+
