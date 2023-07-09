@@ -11,42 +11,6 @@ import Register from './components/Register/Register';
 
 import './App.css';
 
-// const getClarifaiRequestOptions = (imageUrl) => {
-//   const PAT = 'e7e74a8186b04ce4b0c23326eb9aee83';
-//   const USER_ID = 'agneshie';       
-//   const APP_ID = 'face-detection';
-//   //const MODEL_ID = 'face-detection';
-//   // const MODEL_VERSION_ID = 'aa7f35c01e0642fda5cf400f543e7c40';    
-//   const IMAGE_URL = imageUrl;
-
-//   const raw = JSON.stringify({
-//     "user_app_id": {
-//         "user_id": USER_ID,
-//         "app_id": APP_ID
-//     },
-//     "inputs": [
-//         {
-//             "data": {
-//                 "image": {
-//                     "url": IMAGE_URL
-//                 }
-//             }
-//         }
-//     ]
-//   });
-
-//   const requestOptions = {
-//     method: 'POST',
-//     headers: {
-//         'Accept': 'application/json',
-//         'Authorization': 'Key ' + PAT
-//     },
-//     body: raw
-//   };
-
-//   return requestOptions;
-// }
-
 const initialState = {
   input: '',
   imageUrl: '',
@@ -123,7 +87,7 @@ class App extends Component {
     // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
     // this will default to the latest version_id
 
-    fetch("http://localhost:3000/imageurl", {
+    fetch("https://facerecognitionbrainapi-3msf.onrender.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ input: this.state.input })
@@ -132,7 +96,7 @@ class App extends Component {
     .then(result => {
       console.log("result", result);
       if (result) {
-        fetch("http://localhost:3000/image", {
+        fetch("https://facerecognitionbrainapi-3msf.onrender.com/image", {
           method: "put",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: this.state.user.id })
