@@ -87,7 +87,7 @@ class App extends Component {
     // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
     // this will default to the latest version_id
 
-    fetch("https://facerecognitionbrainapi-3msf.onrender.com/imageurl", {
+    fetch("https://facerecognitionbrainapi-62ns.onrender.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ input: this.state.input })
@@ -96,7 +96,7 @@ class App extends Component {
     .then(result => {
       console.log("result", result);
       if (result) {
-        fetch("https://facerecognitionbrainapi-3msf.onrender.com/image", {
+        fetch("https://facerecognitionbrainapi-62ns.onrender.com/image", {
           method: "put",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: this.state.user.id })
