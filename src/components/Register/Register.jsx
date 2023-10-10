@@ -54,7 +54,8 @@ class Register extends Component {
                 className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-90" 
                 type="text" 
                 name="name" 
-                onChange={this.onInputChange}  
+                onChange={this.onInputChange}
+                id="name"
               />
             </div>
             <div className="mt3">
@@ -64,6 +65,7 @@ class Register extends Component {
                 type="email"
                 name="email" 
                 onChange={this.onInputChange}
+                id="email-address"
               />
             </div>
             <div className="mv3">
@@ -73,6 +75,7 @@ class Register extends Component {
                 type="password" 
                 name="password" 
                 onChange={this.onInputChange}
+                id="password"
               />
             </div>
           </fieldset>

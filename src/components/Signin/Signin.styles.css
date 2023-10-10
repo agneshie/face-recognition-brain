@@ -54,7 +54,7 @@
 
 .input-reset {
   -webkit-appearance: none;
-     -moz-appearance: none;
+  -moz-appearance: none;
 }
 
 .input-reset::-moz-focus-inner {
